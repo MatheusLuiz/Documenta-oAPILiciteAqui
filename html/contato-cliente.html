@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - Nome da Tabela</title>
+    <link rel="stylesheet" href="../css/styles2.css">
+</head>
+<body>
+    <header>
+        <h1>Contato Cliente</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Voltar para o Início</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="listar">
+            <h2>Listar</h2>
+            <p>Para listar os dados da tabela <strong>Contato Cliente</strong>, envie uma solicitação contendo o seguinte parâmetro:</p>
+            <p><strong>cliente_id</strong>: Um parâmetro do tipo int, ID do cliente cujos contatos devem ser listados (campo obrigatório).</p>
+        </section>
+        <section id="cadastrar">
+            <h2>Cadastrar</h2>
+            <p>Para cadastrar um novo registro na tabela <strong>Contato Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>cliente</strong>: Um parâmetro do tipo int, ID do cliente associado ao contato (campo obrigatório).</p>
+            <p><strong>tipo_telefone</strong>: Um parâmetro do tipo int, Tipo de telefone (ex.: 1 para residencial, 2 para celular, etc.).</p>
+            <p><strong>ddd</strong>: Um parâmetro do tipo string, Código de área (DDD) do telefone (2 dígitos).</p>
+            <p><strong>telefone</strong>: Um parâmetro do tipo string, Número do telefone (sem formatação).</p>
+            <p><strong>nome_completo</strong>: Um parâmetro do tipo string, Nome completo do contato.</p>
+            <p><strong>sexo</strong>: Um parâmetro do tipo string, Sexo do contato (ex.: "Masculino" ou "Feminino").</p>
+            <p><strong>data_nascimento</strong>: Um parâmetro do tipo string, Data de nascimento no formato YYYY-MM-DD.</p>
+            <p><strong>cpf</strong>: Um parâmetro do tipo string, CPF do contato (11 dígitos).</p>
+            <p><strong>status_cadastro</strong>: Um parâmetro do tipo string, Status do cadastro (ex.: "Ativo" ou "Inativo").</p>
+            <p><strong>email</strong>: Um parâmetro do tipo string, Endereço de e-mail do contato.</p>
+            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pelo cadastro.</p>
+        </section>
+        <section id="atualizar">
+            <h2>Atualizar</h2>
+            <p>Para atualizar um registro existente na tabela <strong>Contato Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>id_cliente</strong>: Um parâmetro do tipo int, ID único do cliente associado ao contato (campo obrigatório).</p>
+            <p><strong>cnpj</strong>: Um parâmetro do tipo string, CNPJ do cliente (14 dígitos).</p>
+            <p><strong>razao_social</strong>: Um parâmetro do tipo string, Razão social do cliente.</p>
+            <p><strong>nome_fantasia</strong>: Um parâmetro do tipo string, Nome fantasia do cliente.</p>
+            <p><strong>status</strong>: Um parâmetro do tipo int, Status do cliente (ex.: 1 para ativo, 3 para inativo).</p>
+            <p><strong>data_cadastro</strong>: Um parâmetro do tipo string, Data de cadastro no formato ISO (YYYY-MM-DD).</p>
+            <p><strong>id_contato</strong>: Um parâmetro do tipo int, ID único do contato que será atualizado (campo obrigatório).</p>
+            <p><strong>nome_completo</strong>: Um parâmetro do tipo string, Nome completo do contato.</p>
+            <p><strong>ddd</strong>: Um parâmetro do tipo string, Código de área (DDD) do telefone (2 dígitos).</p>
+            <p><strong>telefone</strong>: Um parâmetro do tipo string, Número do telefone (sem formatação).</p>
+            <p><strong>tipo_telefone</strong>: Um parâmetro do tipo int, Tipo de telefone (ex.: 1 para residencial, 2 para celular, etc.).</p>
+            <p><strong>sexo</strong>: Um parâmetro do tipo string, Sexo do contato (ex.: "Masculino" ou "Feminino").</p>
+            <p><strong>cpf</strong>: Um parâmetro do tipo string, CPF do contato (11 dígitos).</p>
+            <p><strong>email</strong>: Um parâmetro do tipo string, Endereço de e-mail do contato.</p>
+            <p><strong>status_cadastro</strong>: Um parâmetro do tipo string, Status do cadastro (ex.: "Ativo" ou "Inativo").</p>
+        </section>
+        <section id="deletar">
+            <h2>Deletar</h2>
+            <p>Para deletar um registro existente na tabela <strong>Contato Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>id_contato</strong>: Um parâmetro do tipo int, ID único do contato que será deletado (campo obrigatório).</p>
+            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pela ação de exclusão.</p>
+        </section>
+    </main>
+</body>
+</html>

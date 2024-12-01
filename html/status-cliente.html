@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - Nome da Tabela</title>
+    <link rel="stylesheet" href="../css/styles2.css">
+</head>
+<body>
+    <header>
+        <h1>Status Cliente</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Voltar para o Início</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="listar">
+            <h2>Listar</h2>
+            <p>Não há necessidade de usar parâmetros para utilização desta API</p>
+        </section>
+        <section id="cadastrar">
+            <h2>Cadastrar</h2>
+            <p>Para cadastrar um novo registro na tabela <strong>Status Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>descricao</strong>: Um parâmetro do tipo string, Descrição do status do cliente (campo obrigatório).</p>
+            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pelo cadastro (campo obrigatório).</p>
+        </section>
+        <section id="atualizar">
+            <h2>Atualizar</h2>
+            <p>Para atualizar um registro existente na tabela <strong>Status Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>id_status</strong>: Um parâmetro do tipo int, ID único do status a ser atualizado (campo obrigatório).</p>
+            <p><strong>descricao</strong>: Um parâmetro do tipo string, Nova descrição do status do cliente (campo obrigatório).</p>
+            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pela atualização (campo obrigatório).</p>
+        </section>
+        <section id="deletar">
+            <h2>Deletar</h2>
+            <p>Para deletar um registro existente na tabela <strong>Status Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>id_status</strong>: Um parâmetro do tipo int, ID único do status a ser deletado (campo obrigatório).</p>
+            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pela exclusão (campo obrigatório).</p>
+        </section>
+    </main>
+</body>
+</html>

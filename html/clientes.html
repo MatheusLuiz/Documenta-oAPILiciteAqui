@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - Nome da Tabela</title>
+    <link rel="stylesheet" href="../css/styles2.css">
+</head>
+<body>
+    <header>
+        <h1>Clientes</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Voltar para o Início</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="listar">
+            <h2>Listar</h2>
+            <p>Não há necessidade de usar parâmetros para utilização desta API</p>
+        </section>
+        <section id="cadastrar">
+            <h2>Cadastrar</h2>
+            <p>Para cadastrar um <strong>Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>cnpj:</strong> Um parâmetro do tipo string, Cnpj do cliente (14 dígitos)</p>
+            <p><strong>razao_social</strong>: Um parâmetro do tipo string, Razão social do cliente.</p>
+            <p><strong>nome_fantasia</strong>:Um parâmetro do tipo string, Nome fantasia do cliente.</p>
+            <p><strong>status</strong>: Um parâmetro do tipo string, Status do cliente (1 para ativo, 0 para inativo).</p>
+            <p><strong>data_cadastro</strong>: Um parâmetro do tipo string, Data de cadastro no formato YYYY-MM-DD.</p>
+            <p><strong>usuario</strong>: Um parâmetro do tipo string, ID do usuário responsável pelo cadastro.</p>
+        </section>
+        <section id="atualizar">
+            <h2>Atualizar</h2>
+            <p>Para atualizar um registro existente na tabela <strong>Clientes</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>id_cliente</strong>: Um parâmetro do tipo string, ID único do cliente que será atualizado (campo obrigatório).</p>
+            <p><strong>cnpj</strong>: Um parâmetro do tipo string, número do CNPJ do cliente (14 dígitos).</p>
+            <p><strong>razao_social</strong>: Um parâmetro do tipo string, Razão social do cliente.</p>
+            <p><strong>nome_fantasia</strong>: Um parâmetro do tipo string, Nome fantasia do cliente.</p>
+            <p><strong>status</strong>: Um parâmetro do tipo inteiro, Status do cliente (ex.: 1 para ativo, 2 para inativo).</p>
+            <p><strong>usuario</strong>: Um parâmetro do tipo inteiro, ID do usuário que está realizando a atualização.</p>
+        </section>
+        <section id="deletar">
+            <h2>Deletar</h2>
+            <p>Para deletar um registro da tabela <strong>Clientes</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
+            <p><strong>id_cliente</strong>: Um parâmetro do tipo inteiro, ID único do cliente que será deletado (campo obrigatório).</p>
+            <p><strong>usuario</strong>: Um parâmetro do tipo inteiro, ID do usuário que está realizando a exclusão.</p>
+        </section>
+    </main>
+</body>
+</html>
