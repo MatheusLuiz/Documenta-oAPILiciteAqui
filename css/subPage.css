@@ -1,0 +1,130 @@
+/* Atualizações e melhorias gerais */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    background-color: #f5f5f5; /* Fundo ligeiramente cinza para melhor contraste */
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #222; /* Tom um pouco mais leve que #333 */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #333; /* Mudando para cor primária para dar mais destaque */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    display: inline-block; /* Ajuste para alinhamento melhor */
+}
+header nav a:hover {
+    background-color: #333; /* Azul escuro ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Melhorar a organização e responsividade do conteúdo principal */
+main {
+    display: block;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    background-color: #fff; /* Fundo branco para destacar o conteúdo */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreamento para destacar o bloco */
+    padding-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Seções de Documentação */
+section {
+    margin-bottom: 3rem; /* Maior espaçamento entre seções para melhorar a separação visual */
+    padding: 20px; /* Adicionando padding para melhor espaçamento */
+    background-color: #f9f9f9; /* Fundo diferente para destacar a seção */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombreamento suave */
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Listas dentro das seções */
+ul {
+    padding-left: 20px;
+    margin-top: 1rem;
+}
+
+ul li {
+    margin-bottom: 10px;
+    line-height: 1.6; /* Melhorar a legibilidade dos itens da lista */
+    font-size: 1.05rem; /* Ajuste de tamanho */
+}
+
+/* Parágrafos */
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color: #ffffff; /* Azul para destacar os links */
+    transition: color 0.3s;
+}
+a:hover {
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222; /* Consistência com o header */
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    main {
+        padding: 0 10px;
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+    header nav a {
+        display: inline-block; /* Deixar em linha para não ocupar toda a largura */
+    }
+}

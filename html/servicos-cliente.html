@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentação - Nome da Tabela</title>
-    <link rel="stylesheet" href="../css/styles2.css">
+    <title>Documentação - Serviços Cliente</title>
+    <link rel="stylesheet" href="../css/subPage.css">
 </head>
 <body>
     <header>
-        <h1>Serviços Cliente</h1>
+        <h1>Documentação da API - Serviços Cliente</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Voltar para o Início</a></li>
@@ -17,30 +17,42 @@
     </header>
     <main>
         <section id="listar">
-            <h2>Listar</h2>
-            <p>Não há necessidade de usar parâmetros para utilização desta API</p>
+            <h2>Listar Serviços de Cliente</h2>
+            <p>Para listar todos os serviços de cliente disponíveis, utilize o seguinte endpoint:</p>
+            <ul>
+                <li><strong>GET /listar</strong>: Lista todos os serviços de clientes.</li>
+            </ul>
         </section>
         <section id="cadastrar">
-            <h2>Cadastrar</h2>
-            <p>Para cadastrar um novo registro na tabela <strong>Serviços Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_cliente</strong>: Um parâmetro do tipo int, ID único do cliente associado ao serviço (campo obrigatório).</p>
-            <p><strong>id_tipo_servico</strong>: Um parâmetro do tipo int, ID do tipo de serviço oferecido ao cliente (campo obrigatório).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pelo cadastro (campo obrigatório).</p>
+            <h2>Cadastrar Serviço de Cliente</h2>
+            <p>Para cadastrar um novo serviço de cliente, envie uma solicitação <strong>POST</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>id_cliente</strong>: Inteiro - ID único do cliente associado ao serviço (campo obrigatório).</li>
+                <li><strong>id_tipo_servico</strong>: Inteiro - ID do tipo de serviço oferecido ao cliente (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário responsável pelo cadastro (campo obrigatório).</li>
+            </ul>
         </section>
         <section id="atualizar">
-            <h2>Atualizar</h2>
-            <p>Para atualizar um registro existente na tabela <strong>Serviços Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_servico</strong>: Um parâmetro do tipo int, ID único do serviço a ser atualizado (campo obrigatório).</p>
-            <p><strong>id_cliente</strong>: Um parâmetro do tipo int, ID único do cliente associado ao serviço (campo obrigatório).</p>
-            <p><strong>id_tipo_servico</strong>: Um parâmetro do tipo int, ID do tipo de serviço oferecido ao cliente (campo obrigatório).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pela atualização (campo obrigatório).</p>
+            <h2>Atualizar Serviço de Cliente</h2>
+            <p>Para atualizar um registro existente na tabela <strong>Serviços Cliente</strong>, envie uma solicitação <strong>PUT</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>id_servico</strong>: Inteiro - ID único do serviço a ser atualizado (campo obrigatório).</li>
+                <li><strong>id_cliente</strong>: Inteiro - ID único do cliente associado ao serviço (campo obrigatório).</li>
+                <li><strong>id_tipo_servico</strong>: Inteiro - ID do tipo de serviço oferecido ao cliente (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário responsável pela atualização (campo obrigatório).</li>
+            </ul>
         </section>
         <section id="deletar">
-            <h2>Deletar</h2>
-            <p>Para deletar um registro existente na tabela <strong>Serviços Cliente</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_servico</strong>: Um parâmetro do tipo int, ID único do serviço a ser deletado (campo obrigatório).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pela ação de exclusão (campo obrigatório).</p>
+            <h2>Deletar Serviço de Cliente</h2>
+            <p>Para deletar um registro existente na tabela <strong>Serviços Cliente</strong>, envie uma solicitação <strong>DELETE</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>id_servico</strong>: Inteiro - ID único do serviço a ser deletado (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário responsável pela ação de exclusão (campo obrigatório).</li>
+            </ul>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Documentação da API - Serviços Cliente</p>
+    </footer>
 </body>
 </html>

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentação - Nome da Tabela</title>
-    <link rel="stylesheet" href="../css/styles2.css">
+    <title>Documentação - Login Usuários</title>
+    <link rel="stylesheet" href="../css/subPage.css">
 </head>
 <body>
     <header>
-        <h1>Login Usuários</h1>
+        <h1>Documentação da API - Login Usuários</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Voltar para o Início</a></li>
@@ -17,31 +17,52 @@
     </header>
     <main>
         <section id="listar">
-            <h2>Listar</h2>
-            <p>Não há necessidade de usar parâmetros para utilização desta API</p>
+            <h2>Listar Logins de Usuários</h2>
+            <p>Para listar todos os logins de usuários disponíveis, utilize o seguinte endpoint:</p>
+            <ul>
+                <li><strong>GET /listar</strong>: Lista todos os logins de usuários.</li>
+            </ul>
         </section>
         <section id="cadastrar">
-            <h2>Cadastrar</h2>
-            <p>Para cadastrar um novo registro na tabela <strong>Login Usuários</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID único do usuário (campo obrigatório).</p>
-            <p><strong>username</strong>: Um parâmetro do tipo string, Nome de usuário para login (campo obrigatório).</p>
-            <p><strong>senha</strong>: Um parâmetro do tipo string, Senha do usuário para acesso ao sistema (campo obrigatório).</p>
-            <p><strong>usuario_log</strong>: Um parâmetro do tipo int, ID do usuário responsável pela criação do cadastro (campo obrigatório).</p>
+            <h2>Cadastrar Login de Usuário</h2>
+            <p>Para cadastrar um novo login de usuário, envie uma solicitação <strong>POST</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>usuario</strong>: Inteiro - ID único do usuário (campo obrigatório).</li>
+                <li><strong>username</strong>: String - Nome de usuário para login (campo obrigatório).</li>
+                <li><strong>senha</strong>: String - Senha do usuário para acesso ao sistema (campo obrigatório).</li>
+                <li><strong>usuario_log</strong>: Inteiro - ID do usuário responsável pela criação do cadastro (campo obrigatório).</li>
+            </ul>
         </section>
         <section id="atualizar">
-            <h2>Atualizar</h2>
-            <p>Para atualizar um registro existente na tabela <strong>Login Usuários</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_login</strong>: Um parâmetro do tipo int, ID único do login que será atualizado (campo obrigatório).</p>
-            <p><strong>username</strong>: Um parâmetro do tipo string, Nome de usuário para login (campo obrigatório).</p>
-            <p><strong>senha</strong>: Um parâmetro do tipo string, Nova senha do usuário para acesso ao sistema.</p>
-            <p><strong>usuario_log</strong>: Um parâmetro do tipo int, ID do usuário responsável pela atualização do cadastro (campo obrigatório).</p>
+            <h2>Atualizar Login de Usuário</h2>
+            <p>Para atualizar um registro existente na tabela <strong>Login Usuários</strong>, envie uma solicitação <strong>PUT</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>id_login</strong>: Inteiro - ID único do login que será atualizado (campo obrigatório).</li>
+                <li><strong>username</strong>: String - Nome de usuário para login (campo obrigatório).</li>
+                <li><strong>senha</strong>: String - Nova senha do usuário para acesso ao sistema.</li>
+                <li><strong>usuario_log</strong>: Inteiro - ID do usuário responsável pela atualização do cadastro (campo obrigatório).</li>
+            </ul>
         </section>
         <section id="deletar">
-            <h2>Deletar</h2>
-            <p>Para deletar um registro existente na tabela <strong>Login Usuários</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_login</strong>: Um parâmetro do tipo int, ID único do login que será deletado (campo obrigatório).</p>
-            <p><strong>usuario_log</strong>: Um parâmetro do tipo string, ID do usuário responsável pela exclusão do registro (campo obrigatório).</p>
+            <h2>Deletar Login de Usuário</h2>
+            <p>Para deletar um registro existente na tabela <strong>Login Usuários</strong>, envie uma solicitação <strong>DELETE</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>id_login</strong>: Inteiro - ID único do login que será deletado (campo obrigatório).</li>
+                <li><strong>usuario_log</strong>: Inteiro - ID do usuário responsável pela exclusão do registro (campo obrigatório).</li>
+            </ul>
+        </section>
+        <section id="autenticar">
+            <h2>Autenticar Usuário</h2>
+            <p>Para autenticar um usuário existente, envie uma solicitação <strong>POST</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>username</strong>: String - Nome de usuário (campo obrigatório).</li>
+                <li><strong>senha</strong>: String - Senha do usuário (campo obrigatório).</li>
+            </ul>
+            <p>Este endpoint retornará os dados do usuário autenticado (exceto a senha), caso o login seja bem-sucedido.</p>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Documentação da API - Login Usuários</p>
+    </footer>
 </body>
 </html>

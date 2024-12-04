@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentação - Nome da Tabela</title>
-    <link rel="stylesheet" href="../css/styles2.css">
+    <title>Documentação - Licitações</title>
+    <link rel="stylesheet" href="../css/subPage.css">
 </head>
 <body>
     <header>
-        <h1>Licitações</h1>
+        <h1>Documentação da API - Licitações</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Voltar para o Início</a></li>
@@ -17,46 +17,58 @@
     </header>
     <main>
         <section id="listar">
-            <h2>Listar</h2>
-            <p>Não há necessidade de usar parâmetros para utilização desta API</p>
+            <h2>Listar Licitações</h2>
+            <p>Para listar todas as licitações disponíveis, utilize o seguinte endpoint:</p>
+            <ul>
+                <li><strong>GET /listar</strong>: Lista todas as licitações.</li>
+            </ul>
         </section>
         <section id="cadastrar">
-            <h2>Cadastrar</h2>
-            <p>Para cadastrar um novo registro na tabela <strong>Licitações</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>num_licitacao</strong>: Um parâmetro do tipo string, Número único da licitação (campo obrigatório).</p>
-            <p><strong>modalidade</strong>: Um parâmetro do tipo int, Modalidade da licitação (ex.: 1 para Pregão, 2 para Concorrência, etc.).</p>
-            <p><strong>orgao</strong>: Um parâmetro do tipo string, Órgão responsável pela licitação (ex.: Prefeitura Municipal).</p>
-            <p><strong>portal</strong>: Um parâmetro do tipo string, Portal onde a licitação foi publicada (ex.: ComprasNet).</p>
-            <p><strong>numero_identificacao</strong>: Um parâmetro do tipo string, Número de identificação da licitação (ex.: 12345/2024).</p>
-            <p><strong>status_licitacao</strong>: Um parâmetro do tipo int, Status atual da licitação (ex.: 1 para Aberta, 2 para Finalizada, etc.).</p>
-            <p><strong>objeto</strong>: Um parâmetro do tipo string, Descrição do objeto da licitação (ex.: Aquisição de materiais escolares).</p>
-            <p><strong>cidade</strong>: Um parâmetro do tipo string, Cidade onde a licitação será realizada (ex.: São Paulo).</p>
-            <p><strong>estado</strong>: Um parâmetro do tipo string, Estado onde a licitação será realizada (ex.: SP).</p>
-            <p><strong>data_licitacao</strong>: Um parâmetro do tipo string, Data prevista para a licitação (formato ISO: YYYY-MM-DD).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário que está cadastrando a licitação (campo obrigatório).</p>
+            <h2>Cadastrar Licitação</h2>
+            <p>Para cadastrar uma nova licitação, envie uma solicitação <strong>POST</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>num_licitacao</strong>: String - Número único da licitação (campo obrigatório).</li>
+                <li><strong>modalidade</strong>: Inteiro - Modalidade da licitação (ex.: 1 para Pregão, 2 para Concorrência, etc.) (campo obrigatório).</li>
+                <li><strong>orgao</strong>: String - Órgão responsável pela licitação (ex.: Prefeitura Municipal) (campo obrigatório).</li>
+                <li><strong>portal</strong>: String - Portal onde a licitação foi publicada (ex.: ComprasNet) (campo obrigatório).</li>
+                <li><strong>numero_identificacao</strong>: String - Número de identificação da licitação (ex.: 12345/2024) (campo obrigatório).</li>
+                <li><strong>status_licitacao</strong>: Inteiro - Status atual da licitação (ex.: 1 para Aberta, 2 para Finalizada, etc.) (campo obrigatório).</li>
+                <li><strong>objeto</strong>: String - Descrição do objeto da licitação (ex.: Aquisição de materiais escolares) (campo obrigatório).</li>
+                <li><strong>cidade</strong>: String - Cidade onde a licitação será realizada (ex.: São Paulo) (campo obrigatório).</li>
+                <li><strong>estado</strong>: String - Estado onde a licitação será realizada (ex.: SP) (campo obrigatório).</li>
+                <li><strong>data_licitacao</strong>: String - Data prevista para a licitação no formato ISO (YYYY-MM-DD) (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário que está cadastrando a licitação (campo obrigatório).</li>
+            </ul>
         </section>
         <section id="atualizar">
-            <h2>Atualizar</h2>
-            <p>Para atualizar um registro existente na tabela <strong>Licitações</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_licitacao</strong>: Um parâmetro do tipo int, ID único da licitação que será atualizado (campo obrigatório).</p>
-            <p><strong>num_licitacao</strong>: Um parâmetro do tipo string, Novo número da licitação (campo obrigatório).</p>
-            <p><strong>modalidade</strong>: Um parâmetro do tipo int, Modalidade da licitação (ex.: 1 para Pregão, 2 para Concorrência, 3 para Convite, etc.).</p>
-            <p><strong>orgao</strong>: Um parâmetro do tipo string, Órgão responsável pela licitação (ex.: Prefeitura Municipal).</p>
-            <p><strong>portal</strong>: Um parâmetro do tipo string, Portal onde a licitação foi publicada (ex.: ComprasNet).</p>
-            <p><strong>numero_identificacao</strong>: Um parâmetro do tipo string, Número de identificação da licitação (ex.: 12345/2024).</p>
-            <p><strong>status_licitacao</strong>: Um parâmetro do tipo int, Status atual da licitação (ex.: 1 para Aberta, 2 para Finalizada, 3 para Suspensa, etc.).</p>
-            <p><strong>objeto</strong>: Um parâmetro do tipo string, Descrição do objeto da licitação (ex.: Aquisição de materiais escolares).</p>
-            <p><strong>cidade</strong>: Um parâmetro do tipo string, Cidade onde a licitação será realizada (ex.: São Paulo).</p>
-            <p><strong>estado</strong>: Um parâmetro do tipo string, Estado onde a licitação será realizada (ex.: SP).</p>
-            <p><strong>data_licitacao</strong>: Um parâmetro do tipo string, Nova data prevista para a licitação (formato ISO: YYYY-MM-DD).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário que está atualizando a licitação (campo obrigatório).</p>
+            <h2>Atualizar Licitação</h2>
+            <p>Para atualizar um registro existente na tabela <strong>Licitações</strong>, envie uma solicitação <strong>PUT</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>id_licitacao</strong>: Inteiro - ID único da licitação que será atualizado (campo obrigatório).</li>
+                <li><strong>num_licitacao</strong>: String - Novo número da licitação (campo obrigatório).</li>
+                <li><strong>modalidade</strong>: Inteiro - Modalidade da licitação (ex.: 1 para Pregão, 2 para Concorrência, etc.) (campo obrigatório).</li>
+                <li><strong>orgao</strong>: String - Órgão responsável pela licitação (campo obrigatório).</li>
+                <li><strong>portal</strong>: String - Portal onde a licitação foi publicada (campo obrigatório).</li>
+                <li><strong>numero_identificacao</strong>: String - Número de identificação da licitação (campo obrigatório).</li>
+                <li><strong>status_licitacao</strong>: Inteiro - Status atual da licitação (campo obrigatório).</li>
+                <li><strong>objeto</strong>: String - Descrição do objeto da licitação (campo obrigatório).</li>
+                <li><strong>cidade</strong>: String - Cidade onde a licitação será realizada (campo obrigatório).</li>
+                <li><strong>estado</strong>: String - Estado onde a licitação será realizada (campo obrigatório).</li>
+                <li><strong>data_licitacao</strong>: String - Nova data prevista para a licitação no formato ISO (YYYY-MM-DD) (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário que está atualizando a licitação (campo obrigatório).</li>
+            </ul>
         </section>
         <section id="deletar">
-            <h2>Deletar</h2>
-            <p>Para deletar um registro existente na tabela <strong>Licitações</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_licitacao</strong>: Um parâmetro do tipo string, ID único da licitação que será deletada (campo obrigatório).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável por deletar o registro (campo obrigatório).</p>
+            <h2>Deletar Licitação</h2>
+            <p>Para deletar um registro existente na tabela <strong>Licitações</strong>, envie uma solicitação <strong>DELETE</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>num_licitacao</strong>: String - Número único da licitação que será deletada (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário responsável por deletar o registro (campo obrigatório).</li>
+            </ul>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Documentação da API - Licitações</p>
+    </footer>
 </body>
 </html>

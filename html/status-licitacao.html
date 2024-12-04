@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentação - Nome da Tabela</title>
-    <link rel="stylesheet" href="../css/styles2.css">
+    <title>Documentação - Status Licitação</title>
+    <link rel="stylesheet" href="../css/subPage.css">
 </head>
 <body>
     <header>
-        <h1>Status Licitação</h1>
+        <h1>Documentação da API - Status Licitação</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Voltar para o Início</a></li>
@@ -17,28 +17,40 @@
     </header>
     <main>
         <section id="listar">
-            <h2>Listar</h2>
-            <p>Não há necessidade de usar parâmetros para utilização desta API</p>
+            <h2>Listar Status de Licitação</h2>
+            <p>Para listar todos os status de licitação disponíveis, utilize o seguinte endpoint:</p>
+            <ul>
+                <li><strong>GET /listar</strong>: Lista todos os status de licitações.</li>
+            </ul>
         </section>
         <section id="cadastrar">
-            <h2>Cadastrar</h2>
-            <p>Para cadastrar um novo status de licitação na tabela <strong>Status Licitação</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>nome_status</strong>: Um parâmetro do tipo string, Nome do status de licitação a ser cadastrado (campo obrigatório).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pelo cadastro (campo obrigatório).</p>
+            <h2>Cadastrar Status de Licitação</h2>
+            <p>Para cadastrar um novo status de licitação, envie uma solicitação <strong>POST</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>nome_status</strong>: String - Nome do status de licitação a ser cadastrado (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário responsável pelo cadastro (campo obrigatório).</li>
+            </ul>
         </section>
         <section id="atualizar">
-            <h2>Atualizar</h2>
-            <p>Para atualizar um status de licitação existente na tabela <strong>Status Licitação</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_status</strong>: Um parâmetro do tipo int, ID único do status de licitação que será atualizado (campo obrigatório).</p>
-            <p><strong>nome_status</strong>: Um parâmetro do tipo string, Novo nome do status de licitação (campo obrigatório).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pela atualização (campo obrigatório).</p>
+            <h2>Atualizar Status de Licitação</h2>
+            <p>Para atualizar um registro existente na tabela <strong>Status Licitação</strong>, envie uma solicitação <strong>PUT</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>id_status</strong>: Inteiro - ID único do status de licitação que será atualizado (campo obrigatório).</li>
+                <li><strong>nome_status</strong>: String - Novo nome do status de licitação (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário responsável pela atualização (campo obrigatório).</li>
+            </ul>
         </section>
         <section id="deletar">
-            <h2>Deletar</h2>
-            <p>Para deletar um status de licitação existente na tabela <strong>Status Licitação</strong>, envie uma solicitação contendo os seguintes parâmetros:</p>
-            <p><strong>id_status</strong>: Um parâmetro do tipo int, ID único do status de licitação que será deletado (campo obrigatório).</p>
-            <p><strong>usuario</strong>: Um parâmetro do tipo int, ID do usuário responsável pela exclusão (campo obrigatório).</p>
+            <h2>Deletar Status de Licitação</h2>
+            <p>Para deletar um registro existente na tabela <strong>Status Licitação</strong>, envie uma solicitação <strong>DELETE</strong> contendo os seguintes parâmetros no corpo da requisição:</p>
+            <ul>
+                <li><strong>id_status</strong>: Inteiro - ID único do status de licitação que será deletado (campo obrigatório).</li>
+                <li><strong>usuario</strong>: Inteiro - ID do usuário responsável pela exclusão (campo obrigatório).</li>
+            </ul>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Documentação da API - Status Licitação</p>
+    </footer>
 </body>
 </html>
